@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+.header {
+    display: flex;
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+    url("images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10rem;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+    margin: 1.5rem 10rem;
+    color: white;
+    font-weight: 250;
+    border: 2px solid white;
+    width: 37%;
+    padding: 28px;
+}
+
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+}
+
+.main-nav a {
+    position: relative;
+    display: inline-block; 
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    padding-bottom: 10px; 
+    border-bottom: 2px solid transparent; 
+    transition: all 0.3s ease;
+
+  }
+
+  .main-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+
+  .main-nav a:hover::after {
+    width: 50%; 
+  }
+
+  
+.section{
+    display: flex;
+    margin: 4% auto;
+    width: 80%;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 44%;
+    height: auto; 
+    left: 74%;
+    top: 195px;
+    transform: translateX(-50%);
+    background-color: white;
+    padding-top: 0.5rem;
+    padding-left: 6rem;
+}
+.info h1 {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 350;
+    font-size: 3rem;
+    transform: translateY(44px);
+
+
+}
+.info p {
+    transform: translateY(14px);
+    line-height: 23px;
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    color:hsla(0, 2%, 35%, 0.685);
+    font-weight: 900;    
+}
+
+
+.creations {
+    margin: 8% auto;
+    width: 80%;
+    height: auto;
+}
+
+.creations-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50rem;
+}
+
+.creations-header h2 {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.2rem;
+}
+
+.creations-header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.8rem;
+    border: 1px solid black;
+    padding: 10px 35px;
+}
+
+.creations-header a:hover{
+    background-color: black;
+    color: white;
+}
+
+.creations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2rem; 
+    margin: 2rem auto;
+    padding: 2rem 0;
+}
+
+.creation-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .creation-card img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .creation-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+  }
+  
+  .creation-card span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 300;
+    z-index: 2;
+
+  }
+
+  .creation-card:hover img {
+    opacity: 0.3;
+  }
+  
+  .creation-card:hover span {
+    color: black;
+  }
+
+  .creation-card:hover::after {
+    background: none; 
+  }
+  
+  .footer {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .first-row {
+    position: relative;
+    margin: 3rem 4rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 65rem;
+    align-items: center;
+  }
+
+  .icons {
+    display: flex;
+    gap:15px;
+  }
+
+  .icons img {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .icons img:hover {
+    border-bottom: 2px solid white; 
+  }
+
+  .second-row {
+    margin-top: -40px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 49rem;
+
+  }
+
+  .second-row ul {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    margin-left: 20px;
+  }
+
+  .second-row ul a {
+    position: relative;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+
+  }
+
+  .second-row a::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  .second-row a:hover::after {
+    width: 50%; 
+  }
+
+
+  .second-row h5 {
+    color: hsl(0, 5%, 57%);
+  }
